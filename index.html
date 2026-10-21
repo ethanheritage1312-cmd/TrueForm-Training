@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TrueForm personalised fitness, workouts and nutrition guidance.">
+  <title>TrueForm | Your Training. Your Way.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="#home">True<span>Form</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#membership">Membership</a>
+      <a href="#profile">Your Profile</a>
+      <a href="#dashboard">Workouts</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <p class="eyebrow">YOUR FITNESS. YOUR FUTURE.</p>
+      <h1>Your Training.<br>Your Way.<br><span>Your TrueForm.</span></h1>
+      <p>
+        Your personal fitness journey starts here. Discover workouts
+        built around your goals, your experience and the way you train.
+        At home or at a gym you already have access to.
+      </p>
+      <a class="button" href="#membership">Start Your Journey</a>
+    </section>
+
+    <section id="membership" class="section">
+      <p class="eyebrow">CHOOSE YOUR PLAN</p>
+      <h2>Your membership, your choice.</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Standard</h3>
+          <p class="price">R100 <span>/ month</span></p>
+          <p>30-day free trial</p>
+          <ul>
+            <li>Personalised exercise plans</li>
+            <li>Exercise video tutorials</li>
+            <li>Workout calendar and timers</li>
+            <li>Progress tracking</li>
+          </ul>
+          <a class="button" href="#profile"
+             onclick="choosePlan('standard')">Choose Standard</a>
+        </article>
+
+        <article class="card premium">
+          <p class="eyebrow">EXTRA GUIDANCE</p>
+          <h3>Premium</h3>
+          <p class="price">R250 <span>/ month total</span></p>
+          <p>30-day free trial</p>
+          <ul>
+            <li>Everything in Standard</li>
+            <li>Nutrition guidance</li>
+            <li>Food and calorie information</li>
+            <li>Protein and meal guidance</li>
+          </ul>
+          <a class="button" href="#profile"
+             onclick="choosePlan('premium')">Choose Premium</a>
+        </article>
+      </div>
+      <p class="note">
+        Demo pricing only. Secure accounts, subscriptions and trial billing
+        must be connected before accepting paying members.
+      </p>
+    </section>
+
+    <section id="profile" class="section">
+      <p class="eyebrow">YOUR STARTING POINT</p>
+      <h2>Let's get to know you.</h2>
+      <p>
+        Your details will help us prepare a fitness plan that fits
+        your goals, experience and training environment.
+      </p>
+
+      <form id="profile-form">
+        <label for="name">Full name</label>
+        <input id="name" name="name" required>
+
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="phone">Phone number</label>
+        <input id="phone" name="phone" type="tel">
+
+        <label for="age">Age</label>
+        <input id="age" name="age" type="number" min="13" max="100" required>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">Choose an option</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Prefer to self-describe</option>
+          <option value="unspecified">Prefer not to say</option>
+        </select>
+
+        <label for="height">Height (cm)</label>
+        <input id="height" name="height" type="number" min="80" max="250">
+
+        <label for="weight">Weight (kg)</label>
+        <input id="weight" name="weight" type="number" min="20" max="400">
+
+        <label for="location">Where will you train?</label>
+        <select id="location" name="location" required>
+          <option value="">Choose your training location</option>
+          <option value="home">At home</option>
+          <option value="gym">At a gym I already use</option>
+          <option value="both">Both home and gym</option>
+        </select>
+
+        <label for="goal">Main fitness goal</label>
+        <select id="goal" name="goal" required>
+          <option value="">Choose your goal</option>
+          <option value="muscle">Build muscle and strength</option>
+          <option value="fitness">Improve general fitness</option>
+          <option value="weight">Weight management</option>
+          <option value="strength">Build strength</option>
+          <option value="health">Improve overall wellbeing</option>
+        </select>
+
+        <label for="experience">Training experience</label>
+        <select id="experience" name="experience">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Some experience</option>
+          <option value="advanced">Experienced</option>
+        </select>
+
+        <label for="muscles">Target muscle groups</label>
+        <select id="muscles" name="muscles" multiple>
+          <option value="full">Full Body</option>
+          <option value="chest">Chest</option>
+          <option value="back">Back</option>
+          <option value="shoulders">Shoulders</option>
+          <option value="biceps">Biceps</option>
+          <option value="triceps">Triceps</option>
+          <option value="core">Abs and Core</option>
+          <option value="glutes">Glutes</option>
+          <option value="quadriceps">Front Thighs</option>
+          <option value="hamstrings">Back Thighs</option>
+          <option value="calves">Calves</option>
+          <option value="forearms">Forearms</option>
+        </select>
+        <p class="note">You can select several muscle groups. On a phone, hold the selection options as you choose multiple items.</p>
+
+        <label for="picture">Profile picture (optional)</label>
+        <input id="picture" name="picture" type="file" accept="image/*">
+
+        <label for="additional">Anything else we should know? (optional)</label>
+        <textarea id="additional" name="additional" rows="4"></textarea>
+
+        <button class="button" type="submit">Save Profile & View Workouts</button>
+      </form>
+    </section>
+
+    <section id="dashboard" class="section">
+      <p class="eyebrow">YOUR PERSONAL FITNESS SPACE</p>
+      <h2>Your workout dashboard.</h2>
+      <p>
+        Your personalised programme will bring together your workout
+        calendar, target muscles, exercise tutorials and progress.
+      </p>
+
+      <div class="card-grid">
+        <article class="card">
+          <h3>Workout Calendar</h3>
+          <p>See your training schedule and planned muscle groups.</p>
+        </article>
+        <article class="card">
+          <h3>Exercise Tutorials</h3>
+          <p>Follow exercise demonstrations with playback controls.</p>
+        </article>
+        <article class="card">
+          <h3>Rest Timer</h3>
+          <p>Set rest periods between exercises and sets.</p>
+        </article>
+        <article class="card">
+          <h3>Your Progress</h3>
+          <p>Track completed sessions and resume saved workouts.</p>
+        </article>
+        <article class="card">
+          <h3>Workout Feedback</h3>
+          <p>Rate sessions, leave comments and request easier or harder training.</p>
+        </article>
+        <article class="card">
+          <h3>Nutrition Guidance</h3>
+          <p>Premium members can access nutrition information and food guidance.</p>
+        </article>
+      </div>
+      <p id="welcome-message" class="note">
+        Complete your profile to begin setting up your workout plan.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#home">True<span>Form</span></a>
+    <p>Your Training. Your Way. Your TrueForm.</p>
+    <p>Fitness guidance to support your individual journey.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
