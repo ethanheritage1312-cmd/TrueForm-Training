@@ -20,16 +20,51 @@
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <p class="eyebrow">YOUR FITNESS. YOUR FUTURE.</p>
-      <h1>Your Training.<br>Your Way.<br><span>Your TrueForm.</span></h1>
-      <p>
-        Your personal fitness journey starts here. Discover workouts
-        built around your goals, your experience and the way you train.
-        At home or at a gym you already have access to.
-      </p>
-      <a class="button" href="#membership">Start Your Journey</a>
-    </section>
+    
+<section id="home" class="hero hero-slideshow">
+
+  <div class="hero-slide slide-active"
+       style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85');">
+  </div>
+
+  <div class="hero-slide"
+       style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1800&q=85');">
+  </div>
+
+  <div class="hero-slide"
+       style="background-image: url('https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1800&q=85');">
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow">YOUR FITNESS. YOUR FUTURE.</p>
+
+    <h1>
+      Your Training.<br>
+      Your Way.<br>
+      <span>Your TrueForm.</span>
+    </h1>
+
+    <p>
+      Your goals. Your pace. Your journey.
+      Discover personalised workouts designed around you,
+      whether you train at home or at a gym you already use.
+    </p>
+
+    <a class="button" href="#membership">Start Your Journey</a>
+
+    <div class="slide-controls">
+      <button type="button" id="previous-slide"
+              aria-label="Previous slide">‹</button>
+      <span id="slide-count" aria-live="polite">01 / 03</span>
+      <button type="button" id="next-slide"
+              aria-label="Next slide">›</button>
+    </div>
+  </div>
+
+</section>
+
 
     <section id="membership" class="section">
       <p class="eyebrow">CHOOSE YOUR PLAN</p>
